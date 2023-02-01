@@ -7,7 +7,6 @@ class ScrollBox extends Component {
         this.box.scrollTop = scrollHeight - clientHeight;
     }
 
-
     render() {
 
         const style ={
