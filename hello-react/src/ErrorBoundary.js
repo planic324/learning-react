@@ -1,9 +1,11 @@
 import React, { Compornent } from "react";
 
 class ErrorBoundary extends Compornent {
+
     state = {
         error: false,
     };
+    
     compornentDidCatch(error, info) {
         this.setState({
             error: true,
