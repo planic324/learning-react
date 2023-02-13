@@ -1,20 +1,23 @@
-import React, { Compornent } from "react";
+import React, { Component } from "react";
 
-class ErrorBoundary extends Compornent {
+class ErrorBoundary extends Component {
 
     state = {
-        error: false,
+        error: false
     };
     
-    compornentDidCatch(error, info) {
+    componentDidCatch(error, info) {
+        console.log('에러가 발생했습니다.')
+        console.log({ error, info });
         this.setState({
             error: true,
         });
-        console.log({ error, info });
     }
 
     render() {
-        if (this.state.error) return <div>에러가 발생했습니다!</div>;
+        if (this.state.error) {
+            return <div>에러가 발생했습니다!</div>;
+        }
         return this.props.children;
     }
 }

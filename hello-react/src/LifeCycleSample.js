@@ -13,8 +13,8 @@ class LifeCycleSample extends Component {
         console.log("constructor");
     }
 
-    static getDerivedstateFormProps(nextProps, prevState) {
-        console.log("getDerivedstateFormProps");
+    static getDerivedStateFromProps(nextProps, prevState) {
+        console.log("getDerivedStateFromProps");
         if (nextProps.color !== prevState.color) {
             return { color: nextProps.color };
         }
