@@ -1,4 +1,4 @@
-import { useRef, useCallBack, useState } from "react";
+import { useRef, useCallback, useState } from "react";
 
 const App = () => {
     const nextID = useRef(1);
@@ -8,7 +8,7 @@ const App = () => {
         uselessValue: null,
     });
 
-    const onChange = useCallBack(
+    const onChange = useCallback(
         e => {
             const { name, value } = e.target;
             setForm({
@@ -19,7 +19,7 @@ const App = () => {
         [form]
     );
 
-    const onSubmit = useCallBack(
+    const onSubmit = useCallback(
         e => {
             e.preventDefault();
             const info = {
@@ -42,7 +42,7 @@ const App = () => {
         [data, form.name, form.username]
     );
 
-    const onRemove = useCallBack(
+    const onRemove = useCallback(
         id => {
             setData({
                 ...data,
