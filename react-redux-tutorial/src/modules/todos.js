@@ -1,14 +1,14 @@
-const CHANGE_INPUT = 'todos/CHANGE_INPUT';
-const INSERT = 'todos/INSERT';
-const TOGGLE = 'todos/TOGGLE';
-const REMOVE = 'todos/REMOVE';
+const CHANGE_INPUT = 'todos/CHANGE_INPUT'; // input를 값을 변경
+const INSERT = 'todos/INSERT'; // 새로운 todo 등록
+const TOGGLE = 'todos/TOGGLE'; // todo를 체크/ 미체크
+const REMOVE = 'todos/REMOVE'; // todo를 제거함
 
 export const changeInput = input => ({
     type: CHANGE_INPUT,
     input
 });
 
-let id = 3;
+let id = 3; // insert가 호출될 때 마다 1씩 더해집니다.
 export const insert = text => ({
     type: INSERT,
     todo: {
