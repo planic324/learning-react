@@ -1,9 +1,9 @@
-import CounterContainer from "./containers/CounterContainer";
+import SampleContainer from "./components/SampleContainer";
 
 const App = () => {
   return(
     <div>
-      <CounterContainer/>
+      <SampleContainer/>
     </div>
   );
 };
