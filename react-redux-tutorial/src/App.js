@@ -1,14 +1,15 @@
-import Counter from './components/Counter';
-import Todos from './components/Todos';
+import Counter from './components/Counter'
+import Todos from './components/Todos'
 
 const App = () => {
   return(
     <div>
-      <Counter number={0} />
+      <Counter number={0}/>
       <hr/>
-      <Todos />
+      <Todos/>
     </div>
   )
 }
+
 
 export default App;
